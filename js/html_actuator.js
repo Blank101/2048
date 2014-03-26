@@ -122,6 +122,7 @@ HTMLActuator.prototype.updateScore = function (score) {
 
 HTMLActuator.prototype.updateBestScore = function (bestScore) {
   this.bestContainer.textContent = bestScore;
+  sandboxd.stats.update("High Score", bestScore);
 };
 
 HTMLActuator.prototype.message = function (won) {
